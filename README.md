@@ -5,7 +5,7 @@ Thunderbird Pro is a subscription-based suite of three open source services that
 | Service | What it does | Primary repo |
 | --- | --- | --- |
 | Thundermail | Modern, privacy‑first email hosting (built on Stalwart) | https://github.com/stalwartlabs/stalwart |
-| Appointment | Shareable scheduling links that write to a user’s calendar without exposing the whole calendar | ttps://github.com/thunderbird/appointment |
+| Appointment | Shareable scheduling links that write to a user’s calendar without exposing the whole calendar | https://github.com/thunderbird/appointment |
 | Thunderbird Send | End‑to‑end encrypted file sharing (up to 20 GB) with a web UI and a Thunderbird add‑on | https://github.com/thunderbird/tbpro-add-on |
 
 Each service is open source and can be deployed on its own and run independently. However when combined, they all read the same user profile from a shared authentication database that makes them feel like a single product.
