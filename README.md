@@ -1,33 +1,48 @@
 # Welcome to Thunderbird Pro!
 
-Thunderbird Pro is a set of services, provided in a subscription package, by the Thunderbird project:
+Thunderbird Pro is a subscription-based suite of three open source services that extend the Thunderbird ecosystem:
 
-* **Thundermail**: Trusty email service, built on the modern Stalwart server.
-* **Appointment**: Scheduling tool that gives you a shareable link, allowing your contacts  to pick a time on your calendar to meet.
-* **Thunderbird Send**: End-to-end encrypted file sharing service that allows you to upload large files to the service and share links to download those files with others.
+| Service | What it does | Primary repo |
+| --- | --- |
+| Thundermail | Modern, privacy‑first email hosting (built on Stalwart) | https://github.com/stalwartlabs/stalwart |
+| Appointment | Shareable scheduling links that write to a user’s calendar without exposing the whole calendar | ttps://github.com/thunderbird/appointment |
+| Thunderbird Send | End‑to‑end encrypted file sharing (up to 20 GB) with a web UI and a Thunderbird add‑on | https://github.com/thunderbird/tbpro-add-on |
 
-Each service is open source and spread across several different GitHub repositories. The purpose of this document is to provide a directory of these services and their repositories, to help developers get started.
+Each service is open source and can be deployed on its own and run independently. However when combined, they all read the same user profile from a shared authentication database that makes them feel like a single product.
 
-We accept and encourage contributions to all of our repositories and projects.
+## Getting Started - Contributing
 
-## Thundermail
-While Thunderbird is a well-known email client, **Thundermail** is the email service provider. It is based on the open source Stalwart email service, that supports many modern email protocols.
-<!--thunderbird/mailstrom-->
+### 1. Fork & clone the repo
+Regardless of which repo you plan to contribute to, general ettiquette for contribution is to fork the repository to your own GitHub namespace and then clone your fork. [Read about this process on docs.github.com.](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
 
-<div style="border: 1px solid black; padding: 10px;">
-  Check out Stalwart here: https://github.com/stalwartlabs/stalwart
-</div>
+### 2. Install the development dependencies
 
-## Appointment
-The **Appointment** scheduling tool makes it easy for others to schedule meetings on your calendar, without making your calendar's details public. Set your availability and share a public link with anyone to schedule a meeting on your personal calendar. 
+| Service | Commands |
+| --- | --- |
+| Thundermail (rust) | `rustup toolchain install stable && cargo build` |
+| Appointment (Node / TypeScript) | `npm ci && npm run build` |
+| Thunderbird Send (Web + Add‑on) | `npm ci && npm run dev` (frontend)<br>`web-ext lint && web-ext build` (add‑on) |
 
-<div style="border: 1px solid black; padding: 10px;">
-  Check out Appointment here: https://github.com/thunderbird/appointment
-</div>
+Each repo contain a `CONTRIBUTING.md` that lists the exact versions used. Copy those into your environment.
 
-## Thunderbird Send
-Send encrypted files as large as 20GB using the **Thunderbird Send** file sharing tool. There is a Thunderbird Pro add-on that is encouraged for using this service, although there is also a website front-end view.
+### 3. Run the service locally
 
-<div style="border: 1px solid black; padding: 10px;">
-  Check out Thunderbird Send here: https://github.com/thunderbird/tbpro-add-on
-</div>
+| Service | Commands |
+| --- | --- |
+| Thundermail | `cargo run --release -- --config ./config/dev.toml` |
+| Appointment | `npm start`<br>This will start a local server on `localhost:3000`. |
+| Thunderbird Send | `npm run dev`<br>This will start the web UI on `localhost:8080`. |
+
+### 4. Open a PR
+
+1. Create a branch: `git checkout -b my‑feature`
+2. Make your changes and build/run the service locally (`cargo build && cargo run`, `npm run build`, etc.).
+3. Commit your changes ([Read about writing good commit messages](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
+4. Push and open a Pull Request against the upstream repository ([Read about opening a PR from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)).
+
+### 5. Review & merge
+At least one maintainer must approve the pull request before the change is merged. Often additional changes are requested and can be made in the same PR by updating your feature branch on your fork. Once all changes and comments have been adressed and approved, the PR is ready to be merged into the main project.
+
+## Where to ask questions
+* Matrix channel - [#thunderbird-pro-early-birds:mozilla.org](https://matrix.to/#/#tb-pro-early-birds:mozilla.org)
+* Bug reports - open an issue in the relevant repo; include important information like OS, version, and steps to reproduce.
