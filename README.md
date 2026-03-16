@@ -33,6 +33,24 @@ Regardless of which repo you plan to contribute to, general ettiquette for contr
 ### 4. Review & merge
 At least one maintainer must approve the pull request before the change is merged. Often additional changes are requested and can be made in the same PR by updating your feature branch on your fork. Once all changes and comments have been adressed and approved, the PR is ready to be merged into the main project.
 
-## Where to ask questions
-* Matrix channel - [#thunderbird-pro-early-birds:mozilla.org](https://matrix.to/#/#tb-pro-early-birds:mozilla.org)
-* Bug reports - open an issue in the relevant repo; include important information like OS, version, and steps to reproduce.
+## Need Help? Found a bug? Have an idea? Want to chat?
+If any of these apps are not behaving like it should, or you are not sure if you've encountered a bug:
+* Ask a question on our Matrix channel: [#thunderbird-pro-early-birds:mozilla.org](https://matrix.to/#/#tb-pro-early-birds:mozilla.org)
+
+If you are certain you've identified a bug in an app and would like to help fix it:
+* Open an issue in the relevant repo; include important information like OS, version, and steps to reproduce.
+| Service | Issue Tracker |
+| --- | --- |
+| Thundermail | https://github.com/thunderbird/mailstrom/issues |
+| Appointment | https://github.com/thunderbird/appointment/issues |
+| Thunderbird Send | https://github.com/thunderbird/tbpro-add-on/issues |
+
+If you have an idea how to improve one of these services:
+* Tell us about and vote on your feature ideas on [ideas.tb.pro](https://ideas.tb.pro/)
+
+The Thunderbird Community uses Matrix to communicate:
+* General chat and support for Thunderbird Pro services: [#thunderbird-pro-early-birds:mozilla.org](https://matrix.to/#/#tb-pro-early-birds:mozilla.org)
+* Reach the broader Thunderbird Community in the [#thunderbird-community:mozilla.org](https://matrix.to/#/#thunderbird-community:mozilla.org)
+
+## Roadmap
+To learn more about all the wonderful things planned for this year please see our [roadmap](https://roadmaps.thunderbird.net/en-US/services/).
