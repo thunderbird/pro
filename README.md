@@ -15,7 +15,7 @@ Each service is open source and can be deployed on its own and run independently
 ### 1. Fork & clone the repo
 Regardless of which repo you plan to contribute to, general ettiquette for contribution is to fork the repository to your own GitHub namespace and then clone your fork. [Read about this process on docs.github.com.](https://docs.github.com/en/get-started/exploring-projects-on-github/contributing-to-a-project)
 
-### 2. Review the project documentation
+### 2. Follow the project documentation
 
 | Service | Documentation |
 | --- | --- |
@@ -26,7 +26,8 @@ Regardless of which repo you plan to contribute to, general ettiquette for contr
 ### 3. Open a PR
 
 1. Create a branch: `git checkout -b my‑feature`
-2. Make your changes and build/run the service locally (`cargo build && cargo run`, `npm run build`, etc.).
+2. Make your changes
+3. Following the project documentation, build/run the service locally.
 3. Commit your changes ([Read about writing good commit messages](https://www.gitkraken.com/learn/git/best-practices/git-commit-message)
 4. Push and open a Pull Request against the upstream repository ([Read about opening a PR from a fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork)).
 
@@ -35,7 +36,7 @@ At least one maintainer must approve the pull request before the change is merge
 
 ## Need Help? Found a bug? Have an idea? Want to chat?
 If any of these apps are not behaving like it should, or you are not sure if you've encountered a bug:
-* Ask a question on our Matrix channel: [#thunderbird-pro-early-birds:mozilla.org](https://matrix.to/#/#tb-pro-early-birds:mozilla.org)
+* Ask a question on our Matrix channel: [#tb-services:mozilla.org](https://matrix.to/#/#tb-services:mozilla.org)
 
 If you are certain you've identified a bug in an app and would like to help fix it:
 * Open an issue in the relevant repo; include important information like OS, version, and steps to reproduce.
@@ -49,7 +50,7 @@ If you have an idea how to improve one of these services:
 * Tell us about and vote on your feature ideas on [ideas.tb.pro](https://ideas.tb.pro/)
 
 The Thunderbird Community uses Matrix to communicate:
-* General chat and support for Thunderbird Pro services: [#thunderbird-pro-early-birds:mozilla.org](https://matrix.to/#/#tb-pro-early-birds:mozilla.org)
+* General chat and support for Thunderbird Pro services: [#tb-services:mozilla.org](https://matrix.to/#/#tb-services:mozilla.org)
 * Reach the broader Thunderbird Community in the [#thunderbird-community:mozilla.org](https://matrix.to/#/#thunderbird-community:mozilla.org)
 
 ## Roadmap
