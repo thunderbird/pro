@@ -34,6 +34,9 @@ Regardless of which repo you plan to contribute to, general ettiquette for contr
 ### 4. Review & merge
 At least one maintainer must approve the pull request before the change is merged. Often additional changes are requested and can be made in the same PR by updating your feature branch on your fork. Once all changes and comments have been adressed and approved, the PR is ready to be merged into the main project.
 
+### 5. License headers
+Source files need an MPL license header; see [docs/license-headers.md](docs/license-headers.md) for the script that adds/checks them and how to adopt the CI check in another repo.
+
 ## Need Help? Found a bug? Have an idea? Want to chat?
 If any of these apps are not behaving like it should, or you are not sure if you've encountered a bug:
 * Ask a question on our Matrix channel: [#tb-services:mozilla.org](https://matrix.to/#/#tb-services:mozilla.org)

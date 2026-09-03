@@ -1,0 +1,37 @@
+# Default exclusions for scripts/add-license-headers.sh (gitignore syntax).
+# Copy this file into your repo root and extend it with repo-specific paths;
+# see docs/license-headers.md.
+
+# VCS / CI config
+.git/
+.github/
+
+# Dependencies / vendored code
+node_modules/
+vendor/
+.venv/
+venv/
+
+# Build / generated output
+dist/
+build/
+*.min.js
+*.min.css
+
+# Python
+__pycache__/
+*.pyc
+migrations/
+
+# Test fixtures deliberately missing/varying headers (scripts/tests/run-tests.sh)
+scripts/tests/fixtures/
+
+# Known lockfiles
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+poetry.lock
+uv.lock
+Pipfile.lock
+composer.lock
+Cargo.lock

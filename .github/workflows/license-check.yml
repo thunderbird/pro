@@ -1,0 +1,35 @@
+---
+name: License Header Check
+
+# Runs on this repo's own PRs, and is also callable from other repos:
+#   jobs:
+#     license-check:
+#       uses: thunderbird/pro/.github/workflows/license-check.yml@main
+on:
+  pull_request:
+    branches: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  license-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo under test
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - name: Checkout license-header tooling from thunderbird/pro
+        uses: actions/checkout@v7
+        with:
+          repository: thunderbird/pro
+          ref: ${{ github.workflow_sha }}
+          path: .pro-license-tools
+
+      - name: Check license headers on changed files
+        run: |
+          ./.pro-license-tools/scripts/add-license-headers.sh --check \
+            --base "origin/${{ github.event.pull_request.base.ref }}"
